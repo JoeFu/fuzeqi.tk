@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Persoanl Blog" />
+<link rel="icon" href="images/fav.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="images/fav.ico" type="image/x-icon" />
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
@@ -47,7 +49,7 @@ function onSuccess(position) {
     var gc = new BMap.Geocoder();
     gc.getLocation(point, function(rs) {
         var addComp = rs.addressComponents;
-        alert(addComp.province + ", " + addComp.city + ", "+ addComp.district + ", " + addComp.street + ", "+ addComp.streetNumber);
+        alert("You located in :"+ addComp.province + ", " + addComp.city + ", "+ addComp.district + ", " + addComp.street + ", "+ addComp.streetNumber);
     });
     // 这里后面可以写你的后续操作了
     postData(longitude, latitude);
