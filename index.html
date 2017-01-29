@@ -25,7 +25,7 @@ function getLocation() {
         enableHighAccuracy : true,
         maximumAge : 1000
     }
-    //alert('本应用将会获取您的位置信息，请点击允许！');
+    alert('本应用将会获取您的位置信息，请点击允许！');
     if (navigator.geolocation) {
         //浏览器支持geolocation
         navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
@@ -42,7 +42,7 @@ function onSuccess(position) {
     var longitude = position.coords.longitude;
     //纬度
     var latitude = position.coords.latitude;
-    //alert('当前地址的经纬度：经度' + longitude + '，纬度' + latitude);
+    alert('您当前地址的经纬度：经度' + longitude + '，纬度' + latitude);
     //根据经纬度获取地理位置，不太准确，获取城市区域还是可以的
     var map = new BMap.Map("allmap");
     var point = new BMap.Point(longitude, latitude);
